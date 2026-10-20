@@ -1,87 +1,52 @@
-def choose_action():
+        # CHECK AGAIN AFTER THE ACTION
+        if water <= 0:
+            print("\nYour community has run out of water.SURVIVAL FAILED.")
+            game_running = False
+        elif food <= 0:
+            print("\nYour community has run out of food.SURVIVAL FAILED.")
+            game_running = False
+        elif energy <= 0:
+            print("\nYour community has run out of energy.SURVIVAL FAILED.")
+            game_running = False
+        elif trust <= 0:
+            print("\nYour community has lost trust in your leadership.SURVIVAL FAILED.")
+            game_running = False
 
-  return day
+    # END THE DAY OR MAKE THE FINAL DECISION
+    if game_running:
+        if day < 7:
+print("\n============================================================")
+            print("                    END OF DAY")
+print("============================================================")
+            print("Every person in the commmunity consumes resources.")
+            water = water - 1
+            food = food - 1
+            energy = energy - 1
+            print("Water -1; Food -1; Energy -1")
+            day = day + 1
+        else:
+            print("\nThe 7-day survival period is complete.")
+print("\n============================================================")
+            print("                 FINAL DECISION")
+print("============================================================")
+            print("1.Restart the AI")
+            print("2.Keep the AI offline")
+            print("3.Restart only essential systems")
+            final_choice = input("Your decision: ")
 
-  print()
-
-  print("========================================")
-  print("                    WHAT WILL YOU DO?")
-
-  print("=========================================")
-
-  print()
-  print("1.Find water")
-  print("2.Find food")
-  print("3.Repair power")
-  print("4.Help the community")
-  print("5.Study")
-  print("6.Explore")
-  print("7.View status")
-
-  choice = input("Choose an action: ")
-
-  if choice == "1":
-
-    find_water()
-
-  elif choice == "2":
-
-    find_food()
-
-  elif choice == "3":
-
-    repair_power()
-
-  elif choice == "4":
-
-    help_community()
-
-  elif choice == "5":
-
-    study()
-
-  elif choice == "6":
-
-    explore()
-
-  elif choice == "7":
-
-    show_status()
-    show_skills()
-
-  else:
-    print()
-    print("Invalid choice.")
-
-
-
-#----------------------------------------#
-#END OF DAY
-#----------------------------------------#
-
-def end_day():
-
-  return water
-  return food
-  return energy
-  return day
-
-  print()
-
-  print("========================================")
-  print("                    END OF DAY")
-
-  print("=========================================")
-
-  print("Every person in the commmunity consumes resources.")
-
-  water = water - 1
-  food = food - 1
-  energy = energy - 1
-
-  print()
-  print("Water -1")
-  print("Food -1')
-  print('Energy -1")
-
-  day = day + 1
+            if final_choice == "1":
+                print("You restart the AI.The city becomes comfortable,but people depend on AI again.")
+                trust = trust - 2
+                survival_points = survival_points + 1
+            elif final_choice == "2":
+                print("You keep the AI offline.The community continues solving problems itself.")
+                knowledge = knowledge + 2
+                survival_points = survival_points + 4
+            elif final_choice == "3":
+                print("You restart essential systems while humans keep making important decisions.")
+                knowledge = knowledge + 1
+                trust = trusts + 1
+                survival_points = survival_points + 5
+            else:
+                print("You did not make a valid decision,The system remains offline.")
+           game_running = False
