@@ -1,2 +1,51 @@
-def find_water():
+# GAME VARIABLES
 
+day = 1
+water = 10 
+food = 10
+energy = 10
+knowledge = 5
+trust = 5
+survival_points = 0
+
+days = [
+    "Day 1 - The Blackout",
+    "Day 2 - No Communication",
+    "Day 3 - Water Crisis",
+    "Day 4 - Food Shortage",
+    "Day 5 - Power Failure",
+    "Day 6 - The Storm",
+    "Day 7 - Final Decision"
+]
+
+events = [
+    "The city's AI network has completely stopped.",
+    "All communication satellites are offline.",
+    "The water purification system has stopped.",
+    "Supermarkets are beginning to run out of food.",
+    "The electricity grid is becoming unstable.",
+    "A huge storm is approaching the city.",
+    "You must decide the future of your community."
+]
+
+skills = [
+    "Problem Solving",
+    "Resource Management",
+    "Human Communication",
+    "Independence",
+    "Leadership"
+]
+
+skill_scores = [0,0,0,0,0]
+print("======================================================")
+print("             2050 : OFFGRID SIMULATOR                 ")
+print("======================================================")
+print("/nYEAR 2050.../n")
+print("Humanity has become heavily dependent on artificial intelligence and automated systems.")
+print("AI controls transportation, electricity, water, food distribution and many decisions./n")
+print("Then one morning, THE GLOBAL AI NETWORK COLLAPES.")
+print("Machines stop working. Communication disappears. Power becomes unstable. No food distributions/n")
+print("You are responsible for a small community of 50 people.")
+print("Your mission: SURVIVE FOR 7 DAYS.")
+print("Prove that humans can still function without AI./n")
+input("Press ENTER to begin")
