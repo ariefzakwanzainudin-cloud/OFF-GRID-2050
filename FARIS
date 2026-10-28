@@ -1,1 +1,56 @@
+# CHECK WHETHER THE COMMUNITY IS FAILING 
+
+if water <= 0 :
+ print('\nYour community has run out of water. SURVIVAL FAILED.')
+ game_running = False 
+elif food <= 0 :
+ print('\nYour community has run out of food. SURVIVAL FAILED.')
+ game_running = False
+elif energy <= 0 :
+ print('\nYour community has run out of energy. SURVIVAL FAILED.')
+elif trust <= 0 :
+ print('\nThe community has lost trust in your leadership. SURVIVAL FAILED.')
+ game_running = False
+
+
+
+# FINAL REPORT
+print('\n=============================================================')
+print('                      FINAL REPORT')
+print('============================================================')
+if day == 7 :
+ print('Days survived:' , day - 7)
+else : 
+ print('Days survived:' , day - 1 )
+print('Final water:' , water)
+print('Final food:' , food)
+print('Final energy:' , energy)
+print('Final knowledge:' , knowledge)
+print('Final trust:' , trust)
+print('Survival points:' , survival_points)
+print('\nHUMAN SKILLS')
+for i in range(len(skills)):
+ print(skills[i], ':' , skill_scores[i])
+
+independance = knowledge + trust + skill_scores[0] + skill_scores[2] + skill_scores[3]
+print('\n HUMAN Independence Score:', Independence)
+if independence >= 25:
+ print('RESULT: HIGH HUMAN INDEPENDENCE')
+ print('Your community was able to survive with limited dependence on technology.')
+elif independence >= 15:
+ print('RESULT: MODERATE HUMAN INDEPENDENCE')
+ print('Your community survived, but still depended on technology in several situations.')
+else:
+ print('RESULT: LOW HUMAN INDEPENDENCE')
+ print('Your community survived mainly through technology rather than human problem solving.')
+
+print('\n===========================================================')
+print('                       FINAL MESSAGE')
+print('===========================================================')
+print('Technology is powerful.')
+print('But a society that cannot function without technology is extremely vulnerable.')
+print('The goal is not to eliminate AI.')
+print('The goal is to make sure humans never forget how to think, communicate, solve problems and survive.')
+print('\nThank you for playing.')
+print('2050: WHEN THE MACHINES STOPPED')
 
