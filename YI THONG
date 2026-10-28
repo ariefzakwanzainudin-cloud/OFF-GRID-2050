@@ -1,4 +1,4 @@
-1# CHECK AGAIN AFTER THE ACTION
+# CHECK AGAIN AFTER THE ACTION
 if water <= 0:
         print("\nYour community has run out of water.SURVIVAL FAILED.")
         game_running = False
